@@ -54,53 +54,49 @@ export function Contact() {
           description="Tell us about your project and we'll reach out to schedule a walkthrough — no obligation, no pressure."
         />
 
-        <div className="mt-16 grid gap-8 lg:grid-cols-[1fr_1fr]">
-          <Reveal>
-            <div className="flex h-full flex-col gap-6">
-              <div className="grid gap-4 sm:grid-cols-1">
-                {CONTACT_CARDS.map((card) => {
-                  const Icon = card.icon;
-                  return (
-                    <a
-                      key={card.label}
-                      href={card.href}
-                      target={card.href.startsWith("http") ? "_blank" : undefined}
-                      rel={card.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                      className="group flex items-center gap-4 rounded-2xl border border-ink/8 bg-card p-5 transition-colors duration-300 hover:border-primary/40"
-                    >
-                      <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/8 text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-white">
-                        <Icon className="h-5 w-5" aria-hidden />
-                      </span>
-                      <span>
-                        <span className="block text-xs font-semibold uppercase tracking-[0.14em] text-ink/45">
-                          {card.label}
-                        </span>
-                        <span className="block font-heading text-lg text-ink">
-                          {card.value}
-                        </span>
-                      </span>
-                    </a>
-                  );
-                })}
-              </div>
-
-              <div className="relative flex-1 overflow-hidden rounded-[2rem] border border-ink/8">
-                <iframe
-                  title={`Map showing service area near ${BUSINESS.serviceArea}`}
-                  src={BUSINESS.mapEmbedUrl}
-                  className="h-full min-h-[260px] w-full"
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  aria-label={`Google Map centered on ${BUSINESS.serviceArea}`}
-                />
-              </div>
-            </div>
+        <div className="mt-16 grid gap-6 lg:grid-cols-2 lg:items-start lg:gap-8">
+          <Reveal className="grid gap-4 lg:col-start-1 lg:row-start-1">
+            {CONTACT_CARDS.map((card) => {
+              const Icon = card.icon;
+              return (
+                <a
+                  key={card.label}
+                  href={card.href}
+                  target={card.href.startsWith("http") ? "_blank" : undefined}
+                  rel={card.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                  className="group flex items-center gap-4 rounded-3xl border border-ink/8 bg-card p-5 transition-colors duration-300 hover:border-primary/40"
+                >
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/8 text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-white">
+                    <Icon className="h-5 w-5" aria-hidden />
+                  </span>
+                  <span>
+                    <span className="block text-xs font-semibold uppercase tracking-[0.14em] text-ink/45">
+                      {card.label}
+                    </span>
+                    <span className="block font-heading text-lg text-ink">
+                      {card.value}
+                    </span>
+                  </span>
+                </a>
+              );
+            })}
           </Reveal>
 
-          <Reveal delay={0.1}>
+          <Reveal delay={0.06} className="overflow-hidden rounded-3xl border border-ink/8 lg:col-start-1 lg:row-start-2">
+            <iframe
+              title={`Map showing service area near ${BUSINESS.serviceArea}`}
+              src={BUSINESS.mapEmbedUrl}
+              className="aspect-[16/10] w-full min-h-[260px]"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              aria-label={`Google Map centered on ${BUSINESS.serviceArea}`}
+            />
+          </Reveal>
+
+          <Reveal delay={0.12} className="lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:self-stretch">
             <form
               onSubmit={handleSubmit}
-              className="flex h-full flex-col gap-5 rounded-[2rem] border border-ink/8 bg-card p-8"
+              className="flex h-full flex-col gap-5 rounded-3xl border border-ink/8 bg-card p-8"
             >
               <div>
                 <label htmlFor="name" className="mb-2 block text-xs font-semibold uppercase tracking-[0.14em] text-ink/50">
