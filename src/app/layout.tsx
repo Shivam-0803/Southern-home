@@ -25,9 +25,9 @@ const jakarta = Plus_Jakarta_Sans({
   weight: ["400", "500", "600", "700", "800"],
 });
 
-const TITLE = "Fence Contractor Shreveport, LA | Southern Home Improvements";
+const TITLE = "Fence Contractor Shreveport, LA | Straight Line Fencing Of Louisiana";
 const DESCRIPTION =
-  "Southern Home Improvements (Straight Line Fencing of Louisiana) is a licensed, insured fence contractor in Shreveport, LA. Wood, vinyl, chain link & aluminum fencing, custom gates, decks and pergolas. Free estimates.";
+  "Straight Line Fencing Of Louisiana is a licensed, insured fence contractor in Shreveport, LA. Wood, vinyl, chain link & aluminum fencing, custom gates, decks and pergolas. Free estimates.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 import { BUSINESS, NAV_LINKS, SERVICES } from "@/lib/constants";
 import { Container } from "@/components/ui/Container";
 import { FacebookIcon } from "@/components/icons/FacebookIcon";
@@ -15,7 +15,7 @@ export function Footer() {
               <span className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full ring-2 ring-primary/40">
                 <Image
                   src="/images/brand/straight-line-fencing-logo.jpg"
-                  alt="Southern Home Improvements logo"
+                  alt={`${BUSINESS.name} logo`}
                   fill
                   sizes="48px"
                   className="object-cover"
@@ -23,10 +23,10 @@ export function Footer() {
               </span>
               <div className="flex flex-col leading-none">
                 <span className="font-heading text-lg font-semibold">
-                  Southern Home Improvements
+                  {BUSINESS.name}
                 </span>
                 <span className="mt-0.5 text-[0.62rem] font-semibold uppercase tracking-[0.22em] text-primary">
-                  Straight Line Fencing of Louisiana
+                  {BUSINESS.tagline}
                 </span>
               </div>
             </div>
@@ -95,6 +95,15 @@ export function Footer() {
               </li>
               <li>
                 <a
+                  href={BUSINESS.smsHref}
+                  className="flex items-center gap-3 text-sm text-white/70 transition-colors hover:text-primary"
+                >
+                  <MessageCircle className="h-4 w-4 text-primary" />
+                  Text An Expert
+                </a>
+              </li>
+              <li>
+                <a
                   href={BUSINESS.emailHref}
                   className="flex items-center gap-3 text-sm text-white/70 transition-colors hover:text-primary"
                 >
@@ -112,8 +121,8 @@ export function Footer() {
 
         <div className="flex flex-col items-center justify-between gap-4 pt-8 text-xs text-white/40 sm:flex-row">
           <p>
-            &copy; {new Date().getFullYear()} Southern Home Improvements
-            &middot; Straight Line Fencing of Louisiana. All rights reserved.
+            &copy; {new Date().getFullYear()} {BUSINESS.name}. All rights
+            reserved.
           </p>
           <p>Fence Contractor Shreveport, LA</p>
         </div>

@@ -10,7 +10,7 @@ export function CTABand() {
     <section className="relative isolate overflow-hidden py-28 sm:py-36">
       <Image
         src="/images/gallery/stained-wood-fence-line-commercial-01.jpg"
-        alt="Long stained wood fence line built by Southern Home Improvements in Shreveport, Louisiana"
+        alt={`Long stained wood fence line built by ${BUSINESS.name} in Shreveport, Louisiana`}
         fill
         sizes="100vw"
         className="object-cover"

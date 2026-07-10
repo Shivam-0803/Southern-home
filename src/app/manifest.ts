@@ -4,7 +4,7 @@ import { BUSINESS } from "@/lib/constants";
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: `${BUSINESS.name} | Fence Contractor Shreveport, LA`,
-    short_name: "Southern Home Improvements",
+    short_name: BUSINESS.name,
     description:
       "Fence contractor in Shreveport, LA — wood, vinyl, chain link, and aluminum fencing, custom gates, decks and pergolas.",
     start_url: "/",

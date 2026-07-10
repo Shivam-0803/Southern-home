@@ -22,7 +22,7 @@ export function Hero() {
       <div className="absolute inset-0">
         <Image
           src="/images/hero/wood-privacy-fence-line-blue-sky-shreveport.jpg"
-          alt="Long stained wood privacy fence line under a blue Louisiana sky, built by Southern Home Improvements in Shreveport, LA"
+          alt={`Long stained wood privacy fence line under a blue Louisiana sky, built by ${BUSINESS.name} in Shreveport, LA`}
           fill
           priority
           sizes="100vw"
@@ -39,7 +39,7 @@ export function Hero() {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.22em] text-cream backdrop-blur-md"
         >
-          Straight Line Fencing of Louisiana
+          Straight Line Fencing Of Louisiana
         </motion.span>
 
         <motion.h1

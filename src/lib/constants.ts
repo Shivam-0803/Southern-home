@@ -2,13 +2,12 @@ export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://straightlinefencingla.com";
 
 export const BUSINESS = {
-  name: "Southern Home Improvements",
-  dba: "Straight Line Fencing of Louisiana",
-  shortName: "Southern Home Improvements",
+  name: "Straight Line Fencing Of Louisiana",
   tagline: "Fence Contractor Shreveport, Louisiana",
   category: "Fence Contractor",
   phone: "(318) 423-8696",
   phoneHref: "tel:+13184238696",
+  smsHref: "sms:+13184238696",
   email: "straightlinefencingla@gmail.com",
   emailHref: "mailto:straightlinefencingla@gmail.com",
   website: "straightlinefencingla.com",
@@ -137,7 +136,7 @@ export const FAQS: FaqItem[] = [
   {
     question: "What areas around Shreveport, LA do you serve?",
     answer:
-      "Southern Home Improvements / Straight Line Fencing is based in Shreveport, Louisiana and serves the greater Shreveport area for residential and commercial fencing projects.",
+      "Straight Line Fencing Of Louisiana is based in Shreveport, Louisiana and serves the greater Shreveport area for residential and commercial fencing projects.",
   },
   {
     question: "What types of fences do you install?",

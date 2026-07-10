@@ -32,12 +32,12 @@ export function Header() {
         <Link
           href="#home"
           className="group flex shrink-0 items-center gap-4 xl:mr-4"
-          aria-label="Southern Home Improvements home"
+          aria-label={`${BUSINESS.name} home`}
         >
           <span className="relative h-[58px] w-[58px] shrink-0 overflow-hidden rounded-full ring-2 ring-primary/15 transition-transform duration-500 group-hover:scale-[1.03] sm:h-[60px] sm:w-[60px]">
             <Image
               src="/images/brand/straight-line-fencing-logo.jpg"
-              alt="Southern Home Improvements logo"
+              alt={`${BUSINESS.name} logo`}
               fill
               sizes="60px"
               className="object-cover"
@@ -46,10 +46,10 @@ export function Header() {
           </span>
           <span className="hidden min-w-0 shrink-0 flex-col leading-none sm:flex">
             <span className="font-heading text-lg font-semibold tracking-tight text-ink sm:text-[1.2rem]">
-              Southern Home
+              Straight Line Fencing
             </span>
             <span className="mt-1 text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-primary">
-              Improvements &middot; Fencing
+              Of Louisiana
             </span>
           </span>
         </Link>

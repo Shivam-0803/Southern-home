@@ -6,9 +6,8 @@ export function getLocalBusinessSchema() {
     "@type": ["LocalBusiness", "GeneralContractor"],
     "@id": `${SITE_URL}/#business`,
     name: BUSINESS.name,
-    alternateName: BUSINESS.dba,
     description:
-      "Southern Home Improvements (Straight Line Fencing of Louisiana) is a licensed and insured fence contractor in Shreveport, LA, building wood, vinyl, chain link, and aluminum fencing, custom gates, decks, and pergolas.",
+      "Straight Line Fencing Of Louisiana is a licensed and insured fence contractor in Shreveport, LA, building wood, vinyl, chain link, and aluminum fencing, custom gates, decks, and pergolas.",
     url: SITE_URL,
     telephone: BUSINESS.phoneHref.replace("tel:", ""),
     email: BUSINESS.email,
